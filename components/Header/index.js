@@ -14,27 +14,27 @@ const Header = () => {
       <nav>
         <List>
           <Item>
-            <Link href="./rockets">
+            <Link href="/rockets">
               <a>Rockets</a>
             </Link>
           </Item>
           <Item>
-            <Link href="./launches">
+            <Link href="/launches">
               <a>Launches</a>
             </Link>
           </Item>
           <Item>
-            <Link href="./capsules">
+            <Link href="/capsules">
               <a>Capsules</a>
             </Link>
           </Item>
           <Item>
-            <Link href="./stats">
+            <Link href="/stats">
               <a>Stats</a>
             </Link>
           </Item>
           <Item>
-            <Link href="./about">
+            <Link href="/about">
               <a>About</a>
             </Link>
           </Item>
