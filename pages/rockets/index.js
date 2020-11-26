@@ -7,6 +7,7 @@ const RocketsPage = () => {
     <div>
       <Banner title={"rockets"} />
       <RocketLayout/>
+      
     </div>
   );
 };
