@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Section = styled.article`
-  width: 48%;
   margin-bottom: 40px;
   border: 1px solid white;
-  text-align:center;
-  
+  text-align: center;
+  width: 100%;
+  @media (min-width: 768px) {
+  width: 48%;
+  }
 `;
 export const Title = styled.h2`
   background-color:white;
@@ -48,8 +50,17 @@ export const Info = styled.div`
   justify-content:space-between;
 `;
 export const Bullet = styled.div`
-  & p{
-    margin:0;
-    text-align:left;
+  & p {
+    margin: 0;
+    text-align: left;
+    font-size:12px;
+    padding:0 10px;
+  }
+  @media (min-width: 768px) {
+    & p {
+    font-size:18px;
+      margin: 0;
+      text-align: left;
+    }
   }
 `;

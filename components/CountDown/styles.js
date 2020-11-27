@@ -24,23 +24,25 @@ export const Section = styled.section`
 `;
 
 export const Counter = styled.div`
-  position:relative;
+  position: relative;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index:1;
-  padding:60px 80px;
-  & h1{
-    font-size:48px;
-    text-transform:uppercase;
-    text-align:center;
-    margin:0;
+  z-index: 1;
+  padding: 60px 24px;
+  @media (min-width: 768px) {
+  padding: 60px 80px;
+  }
+  & h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
   }
 `;
 
 export const Info = styled.div`
-  
   justify-content: space-between;
   padding-top: 40px;
   text-align:center;
@@ -61,22 +63,29 @@ export const NumberContainer = styled.div`
 `;
 
 export const Number = styled.div`
-  position:relative;
+  position: relative;
   display: flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  z-index:1;
-  & p{
-    margin:0;
-    font-size:80px;
-    padding-left:40px;
-    padding-right:40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  & p {
+    margin: 0;
+    font-size: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
+    @media (min-width: 768px) {
+      padding-left: 40px;
+      padding-right: 40px;
+      font-size: 80px;
+    }
   }
-  & small{
-    margin:0;
-    font-size:24px;
-    text-transform:uppercase;
-
+  & small {
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
   }
 `;

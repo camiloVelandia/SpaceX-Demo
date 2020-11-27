@@ -13,21 +13,35 @@ export const Head = styled.header`
   z-index:10;
 `;
 export const Logo = styled.a`
-  height:50px;
-  width:280px;
-  cursor:pointer;
-  & img{
-    height:100%;
-    width:100%;
-    object-fit:contain
+  height: 50px;
+  width: 220px;
+  cursor: pointer;
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  @media (min-width: 768px) {
+  width: 280px;
+    
   }
 `;
 export const List = styled.ul`
-  display:flex;
-  padding:0;
-  margin:0;
-  list-style:none;
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  @media (min-width: 768px) {
+  display: flex;
+    
+  }
+`;
+export const MenuContainer = styled.ul`
+  display: block;
   
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 export const Item = styled.li`
   & a {
