@@ -6,7 +6,7 @@ const PastCard = () => {
     <Section>
       <Title>recent missions</Title>
       <Figure>
-        <img src={"./images/escudo.png"} />
+        <img src={"/images/escudo.png"} />
       </Figure>
       <Name>name mission</Name>
       <Text>

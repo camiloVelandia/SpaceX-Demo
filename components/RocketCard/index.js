@@ -7,7 +7,7 @@ const RocketCard = () => {
       <Main>
         <Image>
           <figure>
-            <img src={"./images/falcon.webp"} />
+            <img src={"/images/falcon.webp"} />
           </figure>
         </Image>
         <Info>

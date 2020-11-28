@@ -1,4 +1,5 @@
 import {useRouter} from 'next/router'
+import Head from "next/head";
 
 import { ThemeProvider } from "styled-components";
 import GloblalStyles from '../globlalStyles'
@@ -30,11 +31,12 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-    <GloblalStyles/>
+      <GloblalStyles />
+      
       <ThemeProvider theme={theme}>
-      <Header/>
+        <Header />
         <Component {...pageProps} />
-       <Footer/> 
+        <Footer />
       </ThemeProvider>
     </>
   );

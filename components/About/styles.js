@@ -76,6 +76,9 @@ padding-top:20px;
  & ul{
    list-style:none;
    padding:0;
-
+  & a{
+    color:white;
+    padding-bottom:4px;
+  }
  }
 `;

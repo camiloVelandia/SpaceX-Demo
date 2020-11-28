@@ -39,6 +39,7 @@ export const Image = styled.div`
     object-fit: contain;
   }
   @media (min-width: 1100px) {
+    padding-right:30px;
     & figure {
       height: 750px;
       margin-bottom:0;
