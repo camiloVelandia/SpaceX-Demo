@@ -9,6 +9,7 @@ export const Section = styled.section`
   min-height: 700px;
   /* height: 100vh; */
   padding:80px 20px;
+  box-sizing:border-box;
   width: 100%;
   background-image: url("./images/Dragon.jpg");
   background-position: top;
@@ -64,6 +65,7 @@ export const Text = styled.p`
 export const Grid = styled.div`
 max-width:500px;
  display:flex;
+ flex-wrap:wrap;
  justify-content:space-between;
 `;
 export const Item = styled.div`

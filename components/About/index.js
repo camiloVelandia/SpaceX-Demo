@@ -1,37 +1,52 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import getCompanyInfo from '../../services/getCompanyInfo';
 import { Section, Container, Article, Title,Text,Grid,Item } from './styles';
 
 const About = () => {
+
+  const [info, setinfo] = useState({links:{}} )
+
+
+  useEffect(()=>{
+    getCompanyInfo()
+    .then(data=>setinfo({...data}))
+  },[])
+
   return (
     <Section>
       <Container>
         <Article>
-          <Title>about: space x</Title>
-          <Text>
-            SpaceX designs, manufactures and launches advanced rockets and
-            spacecraft. The company was founded in 2002 to revolutionize space
-            technology, with the ultimate goal of enabling people to live on
-            other planets.
-          </Text>
+          <Title>about: {info.name}</Title>
+          <Text>{info.summary}</Text>
           <Grid>
             <Item>
               <h3>company info</h3>
               <ul>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
+                <li>Founded: {info.founded}</li>
+                <li>CEO: {info.ceo}</li>
+                <li>CTO: {info.cto}</li>
+                <li>COO: {info.coo}</li>
+                <li>CTO propulsion: {info.cto_propulsion}</li>
               </ul>
             </Item>
             <Item>
-              <h3>company info</h3>
+              <h3>More</h3>
               <ul>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
-                <li>Founded: 2002</li>
+                <li>Employees: {info.employees}</li>
+                <li>Launch Sites: {info.launch_sites}</li>
+                <li>Valuation: {info.valuation}</li>
+                <li>
+                  Website:{" "}
+                  <a href={info.links.website} target="_blank">
+                    {info.links.website}
+                  </a>
+                </li>
+                <li>
+                  twitter: {" "}
+                  <a href={info.links.twitter} target="_blank">
+                    {info.links.twitter}
+                  </a>
+                </li>
               </ul>
             </Item>
           </Grid>

@@ -7,10 +7,10 @@ import BtnLaunches from "../../components/BtnLaunches";
 const LaunchesPage = () => {
   return (
     <div>
-      <Banner title={"launches"} />
-      <Latest/>
-      <RecentLayout/>
-      <BtnLaunches/>
+      <Banner title={"launches"} backImage="/images/starlink1.webp" />
+      <Latest />
+      <RecentLayout />
+      <BtnLaunches />
     </div>
   );
 };

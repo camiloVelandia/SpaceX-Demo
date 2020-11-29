@@ -8,7 +8,7 @@ import {Grid} from './styles'
 const StatsPage = () => {
   return (
     <div>
-      <Banner title={"stats"} />
+      <Banner title={"stats"} backImage="/images/stats.jpeg" />
       <HistoryLaunch />
       <Grid>
         <StatCard title="dragon misions" />

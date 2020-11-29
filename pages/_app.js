@@ -20,6 +20,10 @@ export default function App({ Component, pageProps }) {
   if(router.pathname== '/'){
     return (
       <>
+        <Head>
+          <title>State X</title>
+          <meta property="og:title" content="State x" key="title" />
+        </Head>
         <GloblalStyles />
         <ThemeProvider theme={theme}>
           <Header />
@@ -32,8 +36,12 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GloblalStyles />
-      
+
       <ThemeProvider theme={theme}>
+      <Head>
+        <title>State X</title>
+        <meta property="og:title" content="State x" key="title" />
+      </Head>
         <Header />
         <Component {...pageProps} />
         <Footer />

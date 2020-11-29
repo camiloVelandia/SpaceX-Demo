@@ -6,11 +6,11 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./images/rocket.jpg");
+  background-image: url(${props => props.backImage || "/images/rocket.jpg"});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position:relative;
+  position: relative;
   &::after {
     content: "";
     position: absolute;
@@ -21,9 +21,9 @@ export const Section = styled.section`
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 0;
   }
-  & h1{
-    z-index:1;
-    font-size:48px;
-    text-transform:uppercase;
+  & h1 {
+    z-index: 1;
+    font-size: 48px;
+    text-transform: uppercase;
   }
 `;
