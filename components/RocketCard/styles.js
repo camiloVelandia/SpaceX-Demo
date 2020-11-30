@@ -17,13 +17,16 @@ export const Main = styled.div`
   text-align:center;
   @media (min-width: 1100px) {
   display: flex;
-  text-align:left;
+  text-align:justify;
   }
 `;
 
 export const Info = styled.div`
   border:1px solid white;
   padding:40px 15px;
+    @media (min-width: 1100px) {
+    width:50%;
+    }
 `;
 
 export const Image = styled.div`
@@ -31,18 +34,26 @@ export const Image = styled.div`
   align-items: flex-end;
   & figure {
     height: 350px;
-    margin:0 auto;
-    margin-bottom:40px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 1200px;
   }
   & img {
     height: 100%;
     object-fit: contain;
+    width: 100%;
   }
   @media (min-width: 1100px) {
-    padding-right:30px;
+    padding-right: 30px;
+    width:50%;
     & figure {
       height: 750px;
-      margin-bottom:0;
+      margin-bottom: 0;
+    }
+    & img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
     }
   }
 `;
@@ -55,10 +66,10 @@ export const Ul = styled.ul`
   margin: 0;
   text-align: center;
   list-style-position: inside;
-  padding: 0;
+  padding: 0 20px;
   margin-top: 30px;
   display:inline-block;
-  padding:0 20px;
+  padding:0 0px;
   & h2 {
     text-transform: capitalize;
     font-size: 24px;
@@ -67,12 +78,14 @@ export const Ul = styled.ul`
   }
   & li {
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 12px;
+    
   }
   
   @media (min-width: 1100px) {
   text-align: left;
   display:block;
+  padding:0 0px;
   }
 `;
 
@@ -80,8 +93,10 @@ export const Status = styled.div`
   & p {
     margin: 0 auto;
     display: flex;
-    border: 2px solid #98e832;
-    color: #98e832;
+    border: ${(props) =>
+      props.status === "active" ? "2px solid #98e832" : "2px solid red"};
+    color: ${(props) =>
+      props.status === "active" ? "#98e832" : "red"};
     text-transform: uppercase;
     font-size: 18px;
     padding: 10px 20px;
@@ -90,6 +105,5 @@ export const Status = styled.div`
   @media (min-width: 768px) {
     padding: 10px 40px;
     font-size: 24px;
-    
   }
 `;

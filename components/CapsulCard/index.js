@@ -1,60 +1,42 @@
 import React from 'react';
 import { Container, Status, Figure, Info,Name, Text, Ul, Lists } from "./styles";
 
-const CapsulCard = () => {
+const CapsulCard = (props) => {
   return (
     <Container>
       <Info>
-      <Name>name capsule</Name>
+      <Name>{props.name}</Name>
         <Text>
-          With the ability to lift into orbit over 54 metric tons (119,000
-          lb)--a mass equivalent to a 737 jetliner loaded with passengers, crew,
-          luggage and fuel--Falcon Heavy can lift more than twice the payload of
-          the next closest operational vehicle, the Delta IV Heavy, at one-third
-          the cost.
+          {props.info}
         </Text>
         <Lists>
           <Ul>
             <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
+            <li> capacity: {props.capacity}</li>
+            <li> first flight: {props.first_flight}</li>
+            <li> type: {props.type}</li>
+            <li> height: {props.height}</li>
+            <li> feet: {props.feet}</li>
           </Ul>
          
           <Ul>
-            <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
+            <h2>thrusters</h2>
+            <li> type: {props.tpropulsor}</li>
+            <li> amount: {props.amount}</li>
+            <li> fuel1: {props.fuel1}</li>
+            <li> fuel2: {props.fuel2}</li>
+            <li> isp: {props.isp}</li>            
+            <li> pods: {props.pods}</li>            
           </Ul>
-          <Ul>
-            <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-          </Ul>
-          <Ul>
-            <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-          </Ul>
+          
         </Lists>
         <Figure>
-          <img src={'./images/capsul.png'} /> 
+          <img src={props.image} /> 
         </Figure>
       </Info>
 
       <Status>
-        <p>status: active</p>
+        <p>status: {props.status}</p>
       </Status>
     </Container>
   );

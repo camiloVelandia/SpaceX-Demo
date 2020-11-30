@@ -5,7 +5,7 @@ import CapsulesLayout from "../../components/CapsuleLayout";
 const CapsulesPage = () => {
   return (
     <div>
-      <Banner title={"capsules"} backImage='/images/cap.jpg' />
+      <Banner title={"Dragons"} backImage='/images/cap.jpg' />
       <CapsulesLayout />
     </div>
   );

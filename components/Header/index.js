@@ -26,7 +26,7 @@ const Header = () => {
           </Item>
           <Item>
             <Link href="/capsules">
-              <a>Capsules</a>
+              <a>Dragons</a>
             </Link>
           </Item>
           <Item>

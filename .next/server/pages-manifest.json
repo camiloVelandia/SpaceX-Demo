@@ -2,10 +2,7 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
   "/rockets": "pages/rockets.js",
-  "/launches": "pages/launches.js",
-  "/stats": "pages/stats.js",
-  "/about": "pages/about.js",
-  "/capsules": "pages/capsules.js"
+  "/": "pages/index.js",
+  "/launches": "pages/launches.js"
 }

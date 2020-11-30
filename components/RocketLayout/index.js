@@ -1,13 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import RocketCard from "../RocketCard";
 import {Container} from './styles'
+import getRocketInfo from "../../services/getRocketInfo";
+
 
 const RocketLayout = () => {
+
+
+  const [rocket, setRocket] = useState([])
+
+   useEffect(() => {
+     getRocketInfo().then((data) => setRocket(data));
+   }, []);
+
+
   return (
     <Container>
-      <RocketCard/>
-      <RocketCard/>
-      <RocketCard/>
+      {rocket.map((item) => (
+        <RocketCard
+          key={item.id}
+          name={item.name}
+          info={item.description}
+          image={item.flickr_images[1]}
+          status={item.active ? "active" : "disabled"}
+          boosters={item.boosters}
+          company={item.company}
+          country={item.country}
+          costLaunch={item.cost_per_launch}
+          stages={item.stages}
+          succesRate={item.success_rate_pct}
+          engineLoss={item.engines.engine_loss_max}
+          layout={item.engines.layout}
+          number={item.engines.number}
+          type={item.engines.type}
+          version={item.engines.version}
+          propellant1={item.engines.propellant_1}
+          fflight={item.first_flight}
+        />
+      ))}
     </Container>
   );
 };

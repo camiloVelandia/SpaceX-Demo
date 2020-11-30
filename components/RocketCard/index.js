@@ -1,70 +1,45 @@
 import React from 'react';
 import {Container, Status, Main, Image, Info, Text, Ul} from './styles'
 
-const RocketCard = () => {
+const RocketCard = (props) => {
   return (
     <Container>
       <Main>
         <Image>
           <figure>
-            <img src={"/images/falcon.webp"} />
+            <img src={props.image} />
           </figure>
         </Image>
         <Info>
-          <Text>
-            With the ability to lift into orbit over 54 metric tons (119,000
-            lb)--a mass equivalent to a 737 jetliner loaded with passengers,
-            crew, luggage and fuel--Falcon Heavy can lift more than twice the
-            payload of the next closest operational vehicle, the Delta IV Heavy,
-            at one-third the cost.
-          </Text>
+          <h2>{props.name}</h2>
+          <Text>{props.info}</Text>
 
           <Ul>
             <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
+            <li> boosters: {props.boosters}</li>
+            <li> cost-launch: {props.costLaunch}</li>
+            <li> stages: {props.stages}</li>
+            <li> succes rate: {props.succesRate}</li>
           </Ul>
           <Ul>
-            <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
+            <h2>Engines</h2>
+            <li> engine loss max: {props.engineLoss}</li>
+            <li> layout: {props.layout}</li>
+            <li> number: {props.number}</li>
+            <li> type: {props.type}</li>
+            <li> version: {props.version}</li>
+            <li> propellant 1: {props.propellant1}</li>
           </Ul>
           <Ul>
-            <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
+            <h2>Other</h2>
+            <li> fisrt flight: {props.fflight}</li>
+            <li> country: {props.country}</li>
+            
           </Ul>
-          <Ul>
-            <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-          </Ul>
-          <Ul>
-            <h2>Specs</h2>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-            <li> height: 70m</li>
-          </Ul>
-          
-
         </Info>
       </Main>
-      <Status>
-        <p>status: active</p>
+      <Status status={props.status}>
+        <p>status: {props.status}</p>
       </Status>
     </Container>
   );
