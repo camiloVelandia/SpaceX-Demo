@@ -1,7 +1,20 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import {Section, Title, Main, Image, Info, Bullets} from './styles'
+import getLatestLaunch from "../../services/getLatestLaunch";
+import getOneRocket from "../../services/getOneRocket";
 
 const Latest = () => {
+
+const [latest, setLatest] = useState({links:{patch:{}}})
+const [rocketUsed, setRocketUsed] = useState({})
+
+useEffect(() => {
+   getLatestLaunch()
+   .then((data) => setLatest({...data}))
+   if(latest.rocket){
+    return getOneRocket(latest.rocket).then((data) => setRocketUsed({ ...data }));
+  }
+}, []);
   return (
     <Section>
       <Title>
@@ -10,25 +23,17 @@ const Latest = () => {
       <Main>
         <Image>
           <figure>
-            <img src={"./images/escudo.png"} />
+            <img src={latest.links.patch.large} />
           </figure>
         </Image>
         <Info>
-          <h3>Name Mission</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit montes a
-            pellentesque felis, at sed quam quis praesent tempus arcu sociis
-            habitasse donec eros, lacinia elementum etiam per faucibus bibendum
-            lacus venenatis leo nam. Nec aliquet eros phasellus hendrerit
-            consequat magnis malesuada nascetur posuere at, accumsan vestibulum
-            cum gravida erat eget congue imperdiet sagittis, lacinia taciti
-            ultricies mi pretium
-          </p>
+          <h3>{latest.name}</h3>
+          <p>{latest.details}</p>
         </Info>
         <Bullets>
-          <p>Date: november 10</p>
-          <p>site: november 10</p>
-          <p>rocket: november 10</p>
+          <p>Date: {latest.date_local}</p>
+          <p>succes: {latest.success ? "yes" : "fail"}</p>
+          <p>rocket: {rocketUsed.name}</p>
         </Bullets>
       </Main>
     </Section>
