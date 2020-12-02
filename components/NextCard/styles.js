@@ -18,7 +18,18 @@ export const Title = styled.h2`
   font-weight: 600;
   margin: 0;
 `;
-
+export const Figure = styled.figure`
+  max-width: 228px;
+  max-height: 218px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  & img {
+    height: 100%;
+    object-fit: cover;
+  }
+`;
 export const Name = styled.h3`
   font-size: 24px;
   margin-top: 30px;

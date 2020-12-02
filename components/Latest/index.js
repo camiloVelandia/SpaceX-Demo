@@ -2,19 +2,30 @@ import React,{useState, useEffect} from 'react';
 import {Section, Title, Main, Image, Info, Bullets} from './styles'
 import getLatestLaunch from "../../services/getLatestLaunch";
 import getOneRocket from "../../services/getOneRocket";
+import Spinner from "../Spinner";
 
 const Latest = () => {
 
 const [latest, setLatest] = useState({links:{patch:{}}})
 const [rocketUsed, setRocketUsed] = useState({})
+  const [loading, setLoading] = useState(false);
 
 useEffect(() => {
+  setLoading(true);
    getLatestLaunch()
-   .then((data) => setLatest({...data}))
+   .then((data) =>{
+      setLatest({...data})
+      setLoading(false)
+    })
    if(latest.rocket){
     return getOneRocket(latest.rocket).then((data) => setRocketUsed({ ...data }));
   }
 }, []);
+
+if (loading) {
+  return <Spinner />;
+}
+
   return (
     <Section>
       <Title>

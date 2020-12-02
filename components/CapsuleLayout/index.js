@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import CapsulCard from '../CapsulCard'
 import getDragonsInfo from "../../services/getDragonsInfo";
+import Spinner from "../Spinner";
 
 
 import {Container} from './styles'
@@ -8,12 +9,20 @@ import {Container} from './styles'
 const CapsulesLayout = () => {
 
   const [dragon, setDragon] = useState([])
+  const [loading, setLoading] = useState(false);
 
-   useEffect(() => {
-     getDragonsInfo().then((data) => setDragon(data));
+    useEffect(() => {
+      setLoading(true);
+      getDragonsInfo()
+      .then((data) => {
+        setDragon(data)
+        setLoading(false)
+        });
    }, []);
 
-
+if (loading) {
+  return <Spinner />;
+}
   
   return (
     <Container>

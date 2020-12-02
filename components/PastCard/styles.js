@@ -24,6 +24,7 @@ export const Figure = styled.figure`
   height:100%;
   margin:0 auto;
   margin-top:30px;
+  margin-bottom:30px;
   & img{
     height:100%;
     object-fit:cover;

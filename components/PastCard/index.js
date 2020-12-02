@@ -2,27 +2,26 @@ import React from 'react';
 import {Section, Title, Figure,Name,Text,Info,Bullet} from './styles'
 
 const PastCard = (props) => {
-  console.log(props)
   return (
     <Section>
       <Title>recent missions</Title>
       <Figure>
-        <img src={"/images/escudo.png"} />
+        <img src={props.image || "/images/escudo.png"} />
       </Figure>
       <Name>{props.title}</Name>
       <Text>{props.detail}</Text>
       <Info>
         <Bullet>
           <p>date:</p>
-          <p>november 10</p>
+          <p>{props.date}</p>
         </Bullet>
         <Bullet>
-          <p>date:</p>
-          <p>november 10</p>
+          <p>flight number:</p>
+          <p>{props.number}</p>
         </Bullet>
         <Bullet>
-          <p>date:</p>
-          <p>november 10</p>
+          <p>succes:</p>
+          <p>{props.succes}</p>
         </Bullet>
       </Info>
     </Section>

@@ -1,32 +1,27 @@
 import React from "react";
 import { Section, Title, Figure, Name, Text, Info, Bullet } from "./styles";
 
-const NextCard = () => {
+const NextCard = (props) => {
   return (
     <Section>
       <Title>Next missions</Title>
-      <Name>name mission</Name>
+      <Figure>
+        <img src={props.image || "/images/escudo.png"} />
+      </Figure>
+      <Name>{props.name}</Name>
       <Text>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit montes a
-        pellentesque felis, at sed quam quis praesent tempus arcu sociis
-        habitasse donec eros, lacinia elementum etiam per faucibus bibendum
-        lacus venenatis leo nam. Nec aliquet eros phasellus hendrerit consequat
-        magnis malesuada nascetur posuere at, accumsan vestibulum cum gravida
-        erat eget congue imperdiet sagittis, lacinia taciti ultricies mi pretium
+        {props.details || 'Details must be ready in the upcomings days, the information is not provides still.'}
       </Text>
       <Info>
         <Bullet>
           <p>date:</p>
-          <p>november 10</p>
+          <p>{props.date}</p>
         </Bullet>
         <Bullet>
-          <p>date:</p>
-          <p>november 10</p>
+          <p>flight number:</p>
+          <p>{props.number}</p>
         </Bullet>
-        <Bullet>
-          <p>date:</p>
-          <p>november 10</p>
-        </Bullet>
+        
       </Info>
     </Section>
   );

@@ -24,10 +24,30 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/about": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/about.js"
+    ],
+    "/capsules": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/capsules.js"
+    ],
     "/launches": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/launches.js"
+    ],
+    "/launches/next": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/launches/next.js"
+    ],
+    "/launches/prev": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/launches/prev.js"
     ],
     "/rockets": [
       "static/chunks/main.js",

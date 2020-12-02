@@ -2,17 +2,28 @@ import React, { useState, useEffect } from "react";
 import RocketCard from "../RocketCard";
 import {Container} from './styles'
 import getRocketInfo from "../../services/getRocketInfo";
-
+import Spinner from '../Spinner'
 
 const RocketLayout = () => {
 
 
   const [rocket, setRocket] = useState([])
+  const [loading, setLoading] = useState(false)
 
    useEffect(() => {
-     getRocketInfo().then((data) => setRocket(data));
+    setLoading(true)
+    getRocketInfo()
+    .then((data) =>{ 
+      setRocket(data)
+      setLoading(false)
+    });
+    
    }, []);
+   console.log(loading)
 
+  if(loading){
+    return <Spinner/>
+  }
 
   return (
     <Container>
