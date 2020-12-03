@@ -2,10 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/capsules": "pages/capsules.js",
   "/launches": "pages/launches.js",
-  "/launches/prev": "pages/launches/prev.js",
-  "/rockets": "pages/rockets.js",
-  "/launches/next": "pages/launches/next.js",
-  "/about": "pages/about.js"
+  "/": "pages/index.js"
 }
