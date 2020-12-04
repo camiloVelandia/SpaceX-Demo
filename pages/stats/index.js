@@ -1,19 +1,14 @@
 import React from "react";
 import Banner from "../../components/Banner";
 import HistoryLaunch from "../../components/HistoryLaunch";
-import StatCard from "../../components/StatCard";
-
-import {Grid} from './styles'
+import GridStats from "../../components/GridStats";
 
 const StatsPage = () => {
   return (
     <div>
       <Banner title={"stats"} backImage="/images/stats.jpeg" />
       <HistoryLaunch />
-      <Grid>
-        <StatCard title="dragon misions" />
-        <StatCard title="Starlink- in space" />
-      </Grid>
+      <GridStats />
     </div>
   );
 };
