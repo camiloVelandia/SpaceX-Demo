@@ -74,10 +74,13 @@ export const Number = styled.div`
     font-size: 25px;
     padding-left: 24px;
     padding-right: 24px;
+      width:20px;
+      text-align:center;
     @media (min-width: 768px) {
       padding-left: 40px;
       padding-right: 40px;
       font-size: 80px;
+      width:92px
     }
   }
   & small {
