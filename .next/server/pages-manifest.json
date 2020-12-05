@@ -2,8 +2,9 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/stats": "pages/stats.js",
   "/": "pages/index.js",
+  "/stats": "pages/stats.js",
+  "/capsules": "pages/capsules.js",
   "/rockets": "pages/rockets.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+  "/launches": "pages/launches.js"
 }

@@ -83,7 +83,7 @@ const CountDown = () => {
             <span>mission:</span> {nextlaunch.name}
           </p>
           <p>
-            <span>Rocket:</span> {rocketUsed.name}
+            <span>Rocket:</span> {rocketUsed.name || 'falcon'}
           </p>
         </Info>
       </Counter>

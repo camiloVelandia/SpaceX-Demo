@@ -19,7 +19,6 @@ const RocketLayout = () => {
     });
     
    }, []);
-   console.log(loading)
 
   if(loading){
     return <Spinner/>

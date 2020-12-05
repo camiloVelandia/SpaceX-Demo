@@ -39,6 +39,9 @@ const Header = () => {
               <a>About</a>
             </Link>
           </Item>
+          <Item>
+            <input type="search" placeholder="search..." />
+          </Item>
         </List>
       </nav>
       <MenuContainer>

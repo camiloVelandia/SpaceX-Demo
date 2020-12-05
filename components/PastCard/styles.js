@@ -57,11 +57,14 @@ export const Bullet = styled.div`
     font-size:12px;
     padding:0 10px;
   }
+  & span{
+    text-transform:uppercase;
+  }
   @media (min-width: 768px) {
     & p {
     font-size:18px;
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
   }
 `;

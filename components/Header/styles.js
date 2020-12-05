@@ -22,7 +22,7 @@ export const Logo = styled.a`
     object-fit: contain;
   }
   @media (min-width: 768px) {
-  width: 280px;
+  width: 270px;
     
   }
 `;
@@ -47,25 +47,49 @@ export const Item = styled.li`
   & a {
     color: white;
     text-decoration: none;
-    margin-right: 30px;
-    position:relative;
-    padding-bottom:6px;
-    padding-right:5px;
+    margin-right: 12px;
+    position: relative;
+    padding-bottom: 6px;
+    padding-right: 5px;
+    font-size: 12px;
+    @media (min-width: 890px) {
+      font-size: 16px;
+      margin-right: 30px;
+    }
     &:after {
       content: "";
       border-bottom: 2px solid white;
-      width:0;
-      transition: .6s ease-out;
-      position:absolute;
+      width: 0;
+      transition: 0.6s ease-out;
+      position: absolute;
       bottom: 0;
-      left:0;
+      left: 0;
     }
     &:hover {
       &:after {
         content: "";
-        transition: .6s ease-in;
-        width:100%
+        transition: 0.6s ease-in;
+        width: 100%;
       }
+    }
+  }
+
+  & input {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 22px;
+    color: white;
+    max-width: 70px;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-right:0;
+    @media (min-width: 890px) {
+    max-width: 90px;
+      font-size: 14px;
+      margin-right: 30px;
+    }
+    &::placeholder {
+      color: white;
     }
   }
 `;

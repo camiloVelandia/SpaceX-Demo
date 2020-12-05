@@ -8,8 +8,16 @@ const Latest = () => {
 
 const [latest, setLatest] = useState({links:{patch:{}}})
 const [rocketUsed, setRocketUsed] = useState({})
-  const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
+const [date, setDate] = useState('')
 
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const today = new Date(latest.date_local);
 useEffect(() => {
   setLoading(true);
    getLatestLaunch()
@@ -22,9 +30,15 @@ useEffect(() => {
   }
 }, []);
 
+useEffect(()=>{
+  setDate(today.toLocaleDateString("en-US"))
+},[])
+
 if (loading) {
   return <Spinner />;
 }
+
+console.log(latest.date_local);
 
   return (
     <Section>
@@ -42,9 +56,9 @@ if (loading) {
           <p>{latest.details}</p>
         </Info>
         <Bullets>
-          <p>Date: {latest.date_local}</p>
+          <p>Date: {date}</p>
           <p>succes: {latest.success ? "yes" : "fail"}</p>
-          <p>rocket: {rocketUsed.name}</p>
+          <p>rocket: {rocketUsed.name || 'falcon'}</p>
         </Bullets>
       </Main>
     </Section>

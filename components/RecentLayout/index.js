@@ -7,9 +7,13 @@ const PastLayout = () => {
 
 const [launches, setlaunches] = useState([])
 
+
+
 useEffect(() => {
   getAllLaunches().then((data) => setlaunches(data));
 }, []);
+
+
   return (
     <Section>
       {launches.map((item, index)=>{
