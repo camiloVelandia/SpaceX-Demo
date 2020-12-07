@@ -29,25 +29,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/capsules": [
+    "/launches/prev": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/capsules.js"
-    ],
-    "/launches": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/launches.js"
-    ],
-    "/rockets": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/rockets.js"
-    ],
-    "/stats": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/stats.js"
+      "static/chunks/pages/launches/prev.js"
     ]
   },
   "ampFirstPages": []

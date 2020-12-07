@@ -6,7 +6,7 @@ import Spinner from "../Spinner";
 
 const PastLayout = () => {
 
-  const [pastlaunches, setpastlaunches] = useState([]);
+  const [pastlaunches, setpastlaunches] = useState({docs:[]});
   const [loading, setLoading] = useState(false);
 
 
@@ -18,12 +18,13 @@ const PastLayout = () => {
     });
   }, []);
 
+    console.log(pastlaunches);
   if (loading) {
     return <Spinner />;
   }
   return (
     <Section>
-       {pastlaunches.map((item, index)=>{
+       {pastlaunches.docs.map((item, index)=>{
         return (
           <PastCard
             key={item.id}
@@ -32,9 +33,9 @@ const PastLayout = () => {
             image={item.links.patch.small}
             number={item.flight_number}
             date={item.date_local}
-            succes={item.succes? 'succes':'fail'}
+            succes={item.success ? "succes" : "fail"}
           />
-       )})
+        );})
         } 
     </Section>
   );
