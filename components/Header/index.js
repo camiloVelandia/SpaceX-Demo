@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 import { slide as Menu } from "react-burger-menu";
 
 import { Head, Logo, List, Item, MenuContainer } from "./styles";
 
 const Header = () => {
+
+  const [keyword, setkeyword] = useState('')
+  const router = useRouter()
+
+  const handleSubmit= e =>{
+    e.preventDefault()
+    router.push(`/search/${keyword}`)
+  }
+  const handleChange= e =>{
+    setkeyword(e.target.value)
+  }
+
+
   return (
     <Head>
       <Link href="/">
@@ -40,7 +54,9 @@ const Header = () => {
             </Link>
           </Item>
           <Item>
-            <input type="search" placeholder="search..." />
+          <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="search..." onChange={handleChange}  value={keyword}/>
+          </form>
           </Item>
         </List>
       </nav>
