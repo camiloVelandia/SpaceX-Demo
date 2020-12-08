@@ -53,7 +53,7 @@ export const Info = styled.div`
 export const Bullet = styled.div`
   & p {
     margin: 0;
-    text-align: left;
+    text-align: center;
     font-size:12px;
     padding:0 10px;
   }
@@ -62,9 +62,12 @@ export const Bullet = styled.div`
   }
   @media (min-width: 768px) {
     & p {
+    font-size:14px;
+    }
+  }
+  @media (min-width: 992px) {
+    & p {
     font-size:18px;
-      margin: 0;
-      text-align: center;
     }
   }
 `;

@@ -40,7 +40,7 @@ export const Image = styled.div`
   }
   & img {
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
   }
   @media (min-width: 1100px) {

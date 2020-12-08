@@ -38,7 +38,6 @@ if (loading) {
   return <Spinner />;
 }
 
-console.log(latest.date_local);
 
   return (
     <Section>

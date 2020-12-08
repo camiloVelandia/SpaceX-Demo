@@ -42,7 +42,7 @@ const About = () => {
                   </a>
                 </li>
                 <li>
-                  twitter: {" "}
+                  twitter:{" "}
                   <a href={info.links.twitter} target="_blank">
                     {info.links.twitter}
                   </a>
@@ -76,6 +76,11 @@ const About = () => {
                 <li>
                   <a href="https://twitter.com/xander_coder" target="_blank">
                     Find me in Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/camiloVelandia" target="_blank">
+                    Find me in Github
                   </a>
                 </li>
               </ul>

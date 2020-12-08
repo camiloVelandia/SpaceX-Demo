@@ -1,5 +1,6 @@
+export default async function getAllLaunches(page) {
 const API = `https://api.spacexdata.com/v4/launches/query`,
- params = {
+params = {
         method: 'POST', 
         body:JSON.stringify( {
         "query":{},
@@ -7,7 +8,8 @@ const API = `https://api.spacexdata.com/v4/launches/query`,
               "limit":10,
               "sort":{
                 "date_utc":"desc"
-              }
+              },
+              'page':page
             }        
         } ),    
         headers: new Headers( {
@@ -15,7 +17,6 @@ const API = `https://api.spacexdata.com/v4/launches/query`,
         } )
     };   
 
-export default async function getAllLaunches() {
   let response = await fetch(API, params);
   let data = await response.json();
   return data;

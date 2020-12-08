@@ -12,7 +12,7 @@ const PastCard = (props) => {
     day: "numeric",
   };
   const today = new Date(props.date);
-
+ 
   useEffect(() => {
     setDate(today.toLocaleDateString("en-US"));
   },[]);

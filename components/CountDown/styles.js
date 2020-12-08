@@ -11,6 +11,7 @@ export const Section = styled.section`
   background-position:top;
   background-size:cover;
   background-repeat:no-repeat;
+  position: relative;
   &::after{
     content:'';
     position:absolute;
@@ -60,6 +61,11 @@ export const NumberContainer = styled.div`
   display: flex;
   justify-content:space-between;
   padding-top:40px;
+  text-align:center;
+  justify-content:center;
+  & small{
+    font-size:40px;
+  }
 `;
 
 export const Number = styled.div`

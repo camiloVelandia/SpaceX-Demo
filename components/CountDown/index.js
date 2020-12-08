@@ -72,7 +72,7 @@ const CountDown = () => {
         <h1>Up Next</h1>
 
         <NumberContainer>
-          {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+          {timerComponents.length ? timerComponents : <small>Time's up!</small>}
         </NumberContainer>
         <Info>
           <p>

@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import PastCard from '../PastCard'
-import {Section} from './styles'
+import {Section, Pagination} from './styles'
 import getPastLaunches from "../../services/getPastLaunches";
 import Spinner from "../Spinner";
 
@@ -8,19 +8,36 @@ const PastLayout = () => {
 
   const [pastlaunches, setpastlaunches] = useState({docs:[]});
   const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(0);
 
 
   useEffect(() => {
     setLoading(true);
     getPastLaunches().then((data) => {
       setpastlaunches(data);
+      setPage(data.page)
       setLoading(false);
     });
   }, []);
 
-    console.log(pastlaunches);
+
+  const handleNextPage=()=>{
+    setPage(prevPage => prevPage+1)
+  }
+
+  useEffect(()=>{
+    if(page===0)return
+    getPastLaunches(page)
+    .then(nextPagelaunch=>{
+      setpastlaunches(nextPagelaunch)
+    })
+  },[page])
+
   if (loading) {
     return <Spinner />;
+  }
+  if(!pastlaunches.nextPage){
+    return <Spinner/>
   }
   return (
     <Section>
@@ -37,6 +54,7 @@ const PastLayout = () => {
           />
         );})
         } 
+        <Pagination onClick={handleNextPage}>view more</Pagination>
     </Section>
   );
 };

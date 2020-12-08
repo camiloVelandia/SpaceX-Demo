@@ -49,11 +49,12 @@ export const Info = styled.div`
   padding: 0 20px;
   padding-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 export const Bullet = styled.div`
   & p {
     margin: 0;
-    text-align: left;
+    text-align: center;
+    text-transform:uppercase;
   }
 `;
