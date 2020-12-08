@@ -4,7 +4,7 @@
 <p align="center"><p>
 
 
-<p align="center">SpaceX stats App is a website developed with the [Space x API](https://github.com/r-spacex/SpaceX-API)</p>
+<p align="center">SpaceX stats App is a website developed with the <a href="https://github.com/r-spacex/SpaceX-API">Space x API</a> </p>
 
 <div align="center">
 
@@ -17,7 +17,11 @@
 ## Table of Contents
 - [Steps to Collaborate](#steps-to-collaborate)
 - [Views](#views)
-  - [Blog Posts List](#blog-posts-list)
+  - [Home](#home)
+  - [Rockets](#Rockets)
+  - [Dragons](#Dragons)
+  - [Launches](#Launches)
+  - [About](#About)
 - [More Information](#more-information)
 - [License](#license)
 
@@ -34,27 +38,27 @@
 ## Views
 
 ### Home/count-down 
-<div align="center">
+<div align="center" id="home">
     <img alt="home app" src="./views/home.png">
 </div>
 
 ### Rockets page
-<div align="center">
+<div align="center" id="Rockets">
     <img alt="rockets app page" src="./views/rockets.png">
 </div>
 
 ### Dragons Page
-<div align="center">
+<div align="center" id="Dragons">
     <img alt="dragon app page" src="./views/dragons.png">
 </div>
 
 ### Launches pages
-<div align="center">
+<div align="center" id="Launches">
     <img alt="launches pages" src="./views/launches.png">
 </div>
 
 ### About page
-<div align="center">
+<div align="center" id="About">
     <img alt="about pages" src="./views/about.png">
 </div>
 
