@@ -3,5 +3,7 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/search/[key]": "pages/search/[key].js",
-  "/launches/prev": "pages/launches/prev.js"
+  "/launches/prev": "pages/launches/prev.js",
+  "/rockets": "pages/rockets.js",
+  "/stats": "pages/stats.js"
 }

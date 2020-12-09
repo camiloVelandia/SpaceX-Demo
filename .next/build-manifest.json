@@ -29,10 +29,20 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/launches/prev.js"
     ],
+    "/rockets": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/rockets.js"
+    ],
     "/search/[key]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/search/[key].js"
+    ],
+    "/stats": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/stats.js"
     ]
   },
   "ampFirstPages": []

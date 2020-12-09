@@ -112,6 +112,28 @@ Note: Beware of modifying this element as it can break the animations - you shou
   overflow:hidden;
   overflow-y:hidden;
 }
+
+.resultContainer{
+  margin:0 auto;
+   width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.result{
+  padding-top:140px;
+  & .result-title{
+    font-size:28px;
+    text-align:center;
+    & span{
+      font-weight:700;
+      text-transform:capitalize;
+    }
+  }
+}
 `;
 
 export default GlobalStyle;

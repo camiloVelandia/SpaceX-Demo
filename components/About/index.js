@@ -14,6 +14,7 @@ const About = () => {
 
   return (
     <Section>
+    
       <Container>
         <Article>
           <Title>about: {info.name}</Title>

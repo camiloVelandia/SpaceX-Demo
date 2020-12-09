@@ -7,7 +7,7 @@ import getOneRocket from "../../services/getOneRocket";
 const CountDown = () => {
   const [nextlaunch, setNextlaunch] = useState({});
   const [rocketUsed, setRocketUsed] = useState({});
-  const [date, setDate] = useState(`2020-12-05T11:39:00-05:00`);
+  const [date, setDate] = useState('');
   
   const calculateTimeLeft = () => {
      let year = new Date().getFullYear();
@@ -39,33 +39,28 @@ const CountDown = () => {
         )
       }
     })
-    
-    // ;
-    
   }, []);
 
-   
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    setDate(nextlaunch.date_local);
+  });
 
-    useEffect(() => {
-      setTimeout(() => {
-        setTimeLeft(calculateTimeLeft());
-      }, 1000);
-      setDate(nextlaunch.date_local);
-    });
+  const timerComponents = [];
 
-    const timerComponents = [];
+  Object.keys(timeLeft).forEach((interval, index) => {
+  
 
-    Object.keys(timeLeft).forEach((interval, index) => {
-   
+    timerComponents.push(
+      <Number key={index}>
+        <p>{timeLeft[interval]}</p>
+        <span>{interval}</span>{" "}
+      </Number>
+    );
+  });
 
-      timerComponents.push(
-        <Number key={index}>
-          <p>{timeLeft[interval]}</p>
-          <span>{interval}</span>{" "}
-        </Number>
-      );
-    });
- 
   return (
     <Section>
       <Counter>

@@ -18,7 +18,6 @@ export const Pagination = styled.section`
   appearance: none;
   background-color: transparent;
   border: 2px solid white;
-  border-radius: 0.6em;
   color: black;
   cursor: pointer;
   display: flex;
