@@ -16,9 +16,9 @@ export const Pagination = styled.section`
   /* border: 1px solid red; */
   box-sizing: border-box;
   appearance: none;
-  background-color: transparent;
-  border: 2px solid white;
-  color: black;
+  background-color: ${({ theme }) => theme.body};
+  border: 2px solid ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.text};
   cursor: pointer;
   display: flex;
   align-self: center;
@@ -31,14 +31,14 @@ export const Pagination = styled.section`
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 700;
-  border-color: white;
-  box-shadow: 0 0 40px 40px white inset, 0 0 0 0 white;
+  border-color: ${({ theme }) => theme.text};
+  box-shadow: 0 0 40px 40px white inset, 0 0 0 0 ${({ theme }) => theme.text};
   transition: all 150ms ease-in-out;
   &:hover,
   &:focus {
-    color: #fff;
+    color: ${({ theme }) => theme.text};
     outline: 0;
-    box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
+    box-shadow: 0 0 10px 0 white inset,
+      0 0 10px 4px ${({ theme }) => theme.text};
   }
-
 `;

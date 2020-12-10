@@ -3,15 +3,15 @@ import styled from "styled-components";
 export const Section = styled.article`
   width: 100%;
   margin-bottom: 40px;
-  border: 1px solid white;
+  border: 1px solid ${({ theme }) => theme.text};
   text-align: center;
   @media (min-width: 768px) {
-  width: 48%;
-    }
+    width: 48%;
+  }
 `;
 export const Title = styled.h2`
-  background-color: white;
-  color: black;
+  background-color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.body};
   padding: 30px 0;
   font-size: 36px;
   text-transform: uppercase;

@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const Head = styled.header`
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  background-color:black;
-  z-index:10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: ${({ theme }) => theme.body};
+  z-index: 10;
 `;
 export const Logo = styled.a`
   height: 50px;
@@ -45,7 +45,7 @@ export const MenuContainer = styled.ul`
 `;
 export const Item = styled.li`
   & a {
-    color: white;
+    color: ${({ theme }) => theme.text};
     text-decoration: none;
     margin-right: 12px;
     position: relative;
@@ -58,7 +58,7 @@ export const Item = styled.li`
     }
     &:after {
       content: "";
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid ${({ theme }) => theme.text};
       width: 0;
       transition: 0.6s ease-out;
       position: absolute;
@@ -76,20 +76,20 @@ export const Item = styled.li`
 
   & input {
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid ${({ theme }) => theme.text};
     border-radius: 22px;
-    color: white;
+    color: ${({ theme }) => theme.text};
     max-width: 70px;
     padding: 2px 8px;
     font-size: 12px;
-    margin-right:0;
+    margin-right: 0;
     @media (min-width: 890px) {
-    max-width: 90px;
+      max-width: 90px;
       font-size: 14px;
       margin-right: 30px;
     }
     &::placeholder {
-      color: white;
+      color: ${({ theme }) => theme.text};
     }
   }
 `;

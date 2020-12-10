@@ -6,7 +6,7 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(${props => props.backImage || "/images/rocket.jpg"});
+  background-image: url(${(props) => props.backImage || "/images/rocket.jpg"});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,5 +25,6 @@ export const Section = styled.section`
     z-index: 1;
     font-size: 48px;
     text-transform: uppercase;
+    color: white;
   }
 `;

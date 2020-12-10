@@ -28,15 +28,15 @@ export const Section = styled.section`
 `;
 export const Container = styled.div`
   width: 80%;
-  background-color: rgba(0, 0, 0, 0.8);
-  position:relative;
-  z-index:5;
-  padding:40px;
-  border-radius:25px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap
+  background-color: ${({ theme }) => theme.Alpha};
+  position: relative;
+  z-index: 5;
+  padding: 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 export const Article = styled.article`
   margin: 50px 0;
@@ -69,18 +69,18 @@ max-width:500px;
  justify-content:space-between;
 `;
 export const Item = styled.div`
-padding-top:20px;
- & h3{
-   font-size:18px;
-   font-weight:400;
-   text-transform:uppercase;
- }
- & ul{
-   list-style:none;
-   padding:0;
-  & a{
-    color:white;
-    padding-bottom:4px;
+  padding-top: 20px;
+  & h3 {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
   }
- }
+  & ul {
+    list-style: none;
+    padding: 0;
+    & a {
+      color: ${({ theme }) => theme.text};
+      padding-bottom: 4px;
+    }
+  }
 `;

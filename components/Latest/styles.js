@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-width:80%;
-margin:0 auto;
-margin-top:60px;
-margin-bottom:40px;
-border:1px solid white;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  border: 1px solid ${({ theme }) => theme.text};
 `;
 export const Title = styled.div`
-background-color:white;
-text-align  :center;
-padding:15px;
-& h2{
-  color: #000;
-  text-transform:uppercase;
-  font-size:36px;
-  margin:0;
-}
+  background-color: ${({ theme }) => theme.text};
+  text-align: center;
+  padding: 15px;
+  & h2 {
+    color: ${({ theme }) => theme.body};
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 0;
+  }
 `;
 export const Main = styled.div`
   padding: 30px;
@@ -70,9 +70,9 @@ export const Info = styled.div`
     box-sizing: content-box;
   }
   @media (min-width: 992px) {
-    border-right: 1px solid white;
+    border-right: 1px solid ${({ theme }) => theme.text};
     width: 45%;
-    text-align:left;
+    text-align: left;
     & p {
       padding-right: 60px;
     }

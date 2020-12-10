@@ -1,11 +1,32 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+
+export const Button = styled.button`
+  background-color: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+  position: fixed;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  top: 150px;
+  z-index: 10;
+  outline: none;
+  box-shadow: 0px 0px 7px 1px ${({ theme }) => theme.text};
+`;
+
 
 const GlobalStyle = createGlobalStyle`
 /* -------------------------------------------------------------------------- */
 /*----------------------------------Variables-------------------------------- */
 /* -------------------------------------------------------------------------- */
 :root{
-  --brand-color:#114B5F;
+  --back-color:${({ theme }) => theme.Alpha};
 }
 /* Document
    ========================================================================== */
@@ -20,8 +41,9 @@ html {
 body {
   margin: 0;
   font-family:Arial, Helvetica, sans-serif;
-  background-color:black;
-  color:white
+  background-color:${({ theme }) => theme.body} ;
+  color:${({ theme }) => theme.text};
+  transition: all 0.25s linear;
 }
 
 /* Position and sizing of burger button */

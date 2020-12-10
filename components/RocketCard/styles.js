@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
-  margin-bottom:40px;
-  border:1px solid white;
-  border-radius:25px;
-  padding:30px 20px;
+  margin-bottom: 40px;
+  border: 1px solid ${({ theme }) => theme.text};
+  border-radius: 25px;
+  padding: 30px 20px;
   @media (min-width: 1100px) {
-    width:42%;
-    padding:40px 30px;
+    width: 42%;
+    padding: 40px 30px;
   }
 `;
 
@@ -22,11 +22,11 @@ export const Main = styled.div`
 `;
 
 export const Info = styled.div`
-  border:1px solid white;
-  padding:40px 15px;
-    @media (min-width: 1100px) {
-    width:50%;
-    }
+  border: 1px solid ${({ theme }) => theme.text};
+  padding: 40px 15px;
+  @media (min-width: 1100px) {
+    width: 50%;
+  }
 `;
 
 export const Image = styled.div`

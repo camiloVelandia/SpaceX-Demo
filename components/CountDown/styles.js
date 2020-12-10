@@ -29,11 +29,11 @@ export const Counter = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${({ theme }) => theme.Alpha};
   z-index: 1;
   padding: 60px 24px;
   @media (min-width: 768px) {
-  padding: 60px 80px;
+    padding: 60px 80px;
   }
   & h1 {
     font-size: 48px;

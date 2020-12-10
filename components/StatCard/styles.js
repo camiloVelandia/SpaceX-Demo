@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   margin-bottom: 40px;
-  border: 1px solid white;
-  padding:40px 50px;
-  box-sizing:border-box;;
+  border: 1px solid ${({ theme }) => theme.text};
+  padding: 40px 50px;
+  box-sizing: border-box; ;
 `;
 export const Title = styled.h2`
   margin: 0;

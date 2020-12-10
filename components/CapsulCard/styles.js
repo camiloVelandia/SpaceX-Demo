@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   margin-bottom: 40px;
-  border: 1px solid white;
+  border: 1px solid ${({ theme }) => theme.text};
   border-radius: 25px;
   padding: 30px 20px;
   @media (min-width: 992px) {
@@ -13,7 +13,7 @@ export const Container = styled.section`
 `;
 
 export const Info = styled.div`
-  border: 1px solid white;
+  border: 1px solid ${({ theme }) => theme.text};
   padding: 40px 15px;
 `;
 export const Name = styled.div`
