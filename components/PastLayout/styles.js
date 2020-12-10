@@ -13,12 +13,12 @@ export const Section = styled.section`
 export const Pagination = styled.section`
   margin: 0 auto;
   margin-top: 70px;
-  /* border: 1px solid red; */
   box-sizing: border-box;
   appearance: none;
-  background-color: ${({ theme }) => theme.body};
+  background-color: transparent;
   border: 2px solid ${({ theme }) => theme.text};
-  color: ${({ theme }) => theme.text};
+  border-radius: 0.6em;
+  color: ${({ theme }) => theme.body};
   cursor: pointer;
   display: flex;
   align-self: center;
@@ -32,13 +32,13 @@ export const Pagination = styled.section`
   font-family: sans-serif;
   font-weight: 700;
   border-color: ${({ theme }) => theme.text};
-  box-shadow: 0 0 40px 40px white inset, 0 0 0 0 ${({ theme }) => theme.text};
+  box-shadow: 0 0 40px 40px ${({ theme }) => theme.text} inset,
+    0 0 0 0 ${({ theme }) => theme.text};
   transition: all 150ms ease-in-out;
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.text};
     outline: 0;
-    box-shadow: 0 0 10px 0 white inset,
-      0 0 10px 4px ${({ theme }) => theme.text};
+    box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
   }
 `;
