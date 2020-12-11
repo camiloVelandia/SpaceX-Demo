@@ -18,6 +18,10 @@ export const Button = styled.button`
   z-index: 10;
   outline: none;
   box-shadow: 0px 0px 7px 1px ${({ theme }) => theme.text};
+  @media (max-width: 768px) {
+    right: 15px;
+    top: 100px;
+  }
 `;
 
 

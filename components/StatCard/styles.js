@@ -11,10 +11,13 @@ export const Title = styled.h2`
   font-size: 28px;
   text-transform: uppercase;
   max-width: 300px;
+  text-align:center;
   @media (min-width: 768px) {
   font-size: 48px;
+  margin: 0 auto;
   }
 `;
 export const Container = styled.div`
   text-align:center;
+  padding-top:50px;
 `;
