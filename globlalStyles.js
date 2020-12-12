@@ -61,24 +61,30 @@ body {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: white;
+  background:${({ theme }) => theme.text};
   height:10px;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: white;
+  background: ${({ theme }) => theme.text};
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 12px;
-  width: 24px;
+  top:15px;
+  right:15px;
+  width:55px;
+  height:55px;
+  margin-top:15px;
+  margin-right:15px;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: white;
+  height:30px;
+  
 }
 
 /*
@@ -104,7 +110,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: ${({ theme }) => theme.body};
   overflow:hidden;
   overflow-y:hidden;
 }
@@ -124,6 +130,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     margin-top:-30px;
     padding-bottom:50px;
     outline:none;
+    color: ${({ theme }) => theme.body};
   }
 }
 
@@ -134,7 +141,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: ${({ theme }) => theme.text};
   overflow:hidden;
   overflow-y:hidden;
 }

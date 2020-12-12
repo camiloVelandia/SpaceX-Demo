@@ -29,7 +29,8 @@ const PastLayout = () => {
     if(page===0)return
     getPastLaunches(page)
     .then(nextPagelaunch=>{
-      setpastlaunches(nextPagelaunch)
+      const total= pastlaunches
+      setpastlaunches( nextPagelaunch)
     })
   },[page])
 

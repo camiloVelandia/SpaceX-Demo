@@ -74,17 +74,16 @@ export const Status = styled.div`
   & p {
     margin: 0 auto;
     display: flex;
-    border: 2px solid #98e832;
-    color: #98e832;
+    border: 2px solid ${({ theme }) => theme.succes};
+    color: ${({ theme }) => theme.succes};
     text-transform: uppercase;
     font-size: 16px;
     padding: 10px 40px;
     width: fit-content;
   }
   @media (min-width: 768px) {
-    & p{
-    font-size: 24px;
-
+    & p {
+      font-size: 24px;
     }
   }
 `;

@@ -52,6 +52,9 @@ export const Item = styled.li`
     padding-bottom: 6px;
     padding-right: 5px;
     font-size: 12px;
+    &.menu-item{
+      color: white;
+    } 
     @media (min-width: 890px) {
       font-size: 16px;
       margin-right: 30px;

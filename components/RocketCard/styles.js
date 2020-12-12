@@ -65,11 +65,11 @@ export const Text = styled.p`
 export const Ul = styled.ul`
   margin: 0;
   text-align: center;
-  list-style-position: inside;
   padding: 0 20px;
   margin-top: 30px;
   display:inline-block;
-  padding:0 0px;
+  padding:0 10px;
+  list-style:none;
   & h2 {
     text-transform: capitalize;
     font-size: 24px;
@@ -83,6 +83,7 @@ export const Ul = styled.ul`
   }
   
   @media (min-width: 1100px) {
+  list-style: inside;
   text-align: left;
   display:block;
   padding:0 0px;
@@ -94,9 +95,8 @@ export const Status = styled.div`
     margin: 0 auto;
     display: flex;
     border: ${(props) =>
-      props.status === "active" ? "2px solid #98e832" : "2px solid red"};
-    color: ${(props) =>
-      props.status === "active" ? "#98e832" : "red"};
+      props.status === "active" ? `2px solid ${props.theme.succes}` : "2px solid red"};
+    color: ${(props) => (props.status === "active" ? `${props.theme.succes}` : "red")};
     text-transform: uppercase;
     font-size: 18px;
     padding: 10px 20px;
@@ -105,5 +105,6 @@ export const Status = styled.div`
   @media (min-width: 768px) {
     padding: 10px 40px;
     font-size: 24px;
+    /* ${({ theme }) => theme.text} */
   }
 `;

@@ -10,7 +10,19 @@ const StatCard = (props) => {
     <Section>
       <Title>{props.title || "titulo"}</Title>
       <Container>
-        <Doughnut data={props.items} />
+        <Doughnut
+          data={props.items}
+          width={544}
+          height={518}
+          options={{
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              position: "bottom",
+              responsive:true
+            },
+          }}
+        />
       </Container>
     </Section>
   );

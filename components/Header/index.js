@@ -54,37 +54,42 @@ const Header = () => {
             </Link>
           </Item>
           <Item>
-          <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="search..." onChange={handleChange}  value={keyword}/>
-          </form>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="search..."
+                onChange={handleChange}
+                value={keyword}
+              />
+            </form>
           </Item>
         </List>
       </nav>
       <MenuContainer>
-        <Menu right width={'100%'}>
+        <Menu right width={"100%"} s>
           <Item>
             <Link href="/rockets">
-              <a>Rockets</a>
+              <a className="menu-item">Rockets</a>
             </Link>
           </Item>
           <Item>
             <Link href="/launches">
-              <a>Launches</a>
+              <a className="menu-item">Launches</a>
             </Link>
           </Item>
           <Item>
             <Link href="/capsules">
-              <a>Capsules</a>
+              <a className="menu-item">Capsules</a>
             </Link>
           </Item>
           <Item>
             <Link href="/stats">
-              <a>Stats</a>
+              <a className="menu-item">Stats</a>
             </Link>
           </Item>
           <Item>
             <Link href="/about">
-              <a>About</a>
+              <a className="menu-item">About</a>
             </Link>
           </Item>
         </Menu>

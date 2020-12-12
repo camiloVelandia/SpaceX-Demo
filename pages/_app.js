@@ -17,12 +17,14 @@ const lightTheme = {
   body: "#E2E2E2",
   text: "#363537",
   Alpha: "rgba(255,255,255,.7)",
+  succes: "#5ca400",
 };
 
 export const darkTheme = {
   body: "#000",
   Alpha: "rgba(0,0,0,.8)",
   text: "#FAFAFA",
+  succes: "#98e832",
 };
 
 

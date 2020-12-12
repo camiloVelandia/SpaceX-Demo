@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from "react";
+import { push } from "react-burger-menu";
 import getPastLaunches from "../../services/getPastLaunchesNP";
 import getPayload from "../../services/getPayload";
 
@@ -15,6 +16,7 @@ const GridStats = () => {
   
   const [customer, setcustomer] = useState([]);
   const [customerName, setcustomerName] = useState([]);
+  const [customerLaunches, setcustomerLaunches] = useState([]);
 
 
   // bring the data for launch stats
@@ -35,7 +37,7 @@ const GridStats = () => {
   }, [dragonInfo]);
 
     const dataSucces = {
-      labels: ["fail", "succes"],
+      labels: ["FAIL", "SUCCESS"],
       datasets: [
         {
           label: "# of Votes",
@@ -64,16 +66,15 @@ const GridStats = () => {
   },[customer])
   
   useEffect(()=>{
-    const darpa= customer.filter((item)=>{
-      const total = item.customers.includes(customerName[5]);
-      return total
-      console.log(total.length) 
-      // console.log(customerName[0]); 
-    })
-    // const darpa= customer.filter((item)=>{
-    //    console.log(item.customers.includes('DARPA')); 
-    // })
-    console.log(darpa.length)
+    const result=[]
+    for (let i = 0; i < customerName.length; i++) {
+      let element = customer.filter((item)=>{
+        const total = item.customers.includes(customerName[i]);
+        return total
+      })
+      result.push(element.length)
+    }
+    setcustomerLaunches(result)
     
   },[customerName])
 
@@ -81,8 +82,7 @@ const GridStats = () => {
     labels: customerName,
     datasets: [
       {
-        label: "# of Votes",
-        data: [12, 19, 3, 5],
+        data: customerLaunches,
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -98,6 +98,7 @@ const GridStats = () => {
         borderWidth: 1,
       },
     ],
+    
   };
 
   return (
@@ -109,4 +110,5 @@ const GridStats = () => {
 };
 
 export default GridStats;
+
 

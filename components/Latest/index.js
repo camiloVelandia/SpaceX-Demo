@@ -32,7 +32,7 @@ useEffect(() => {
 
 useEffect(()=>{
   setDate(today.toLocaleDateString("en-US"))
-},[])
+},[latest])
 
 if (loading) {
   return <Spinner />;
