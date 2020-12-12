@@ -44,7 +44,7 @@ const options = {
 const HistoryLaunch = () => {
   return (
     <Section>
-      <Title>Next missions</Title>
+      <Title>Starship - Hop Tests</Title>
       <Container>
         <Bar data={data} options={options} />
       </Container>
