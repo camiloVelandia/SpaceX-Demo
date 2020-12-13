@@ -59,7 +59,7 @@ const PastLayout = () => {
         })}
         <BtnContainer>
           {!pastlaunches.nextPage ? (
-            <p>no hay mas resultados </p>
+            <p>Not more results available</p>
           ) : (
             <Pagination onClick={handleNextPage}>view more</Pagination>
           )}

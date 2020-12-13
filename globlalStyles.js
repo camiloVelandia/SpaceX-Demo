@@ -152,8 +152,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 0 auto;
   margin-top: 50px;
   display:flex;
-  justify-content:center;
+  justify-content:space-between;
   flex-wrap:wrap;
+  & .notFound{
+    text-align:center;
+    width:100%;
+  }
+  & article{
+    @media (min-width: 768px) {
+    width:48%;
+    
+  }
+  }
 }
 
 .result{

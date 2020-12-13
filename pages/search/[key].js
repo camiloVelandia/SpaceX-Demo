@@ -1,34 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import getAllLaunches from "../../services/getAllLaunches";
+import getFilterLaunches from "../../services/getFilterLaunches";
 import PastCard from "../../components/PastCard";
 
 const Result = () => {
   const router = useRouter();
-  const [launches, setlaunches] = useState([]);
+  const [launches, setlaunches] = useState({docs:[]});
   const [result, setresult] = useState([]);
+  const [keyword, setkeyword] = useState(router.query.key);
+
 
 useEffect(() => {
-  getAllLaunches().then((data) => setlaunches(data));
-}, []);
+  getFilterLaunches(keyword).then((data) => {
+    setlaunches(data);
+  });
+  
+}, [keyword]);
+
 
 
 useEffect(()=>{
-  const search = launches.filter(
-    (item) => item.name.toLowerCase() === router.query.key.toLowerCase()
-  );
-  setresult(search)
+  setresult(launches.docs)
+  setkeyword(router.query.key)
 },[launches])
+
 
 
 
   return (
     <div className="result">
       <p className="result-title">
-        <span> results for:</span> {router.query.key}
+        <span> results for:</span> {keyword}
       </p>
       <div className="resultContainer">
-        {result.map((item, index) => {
+      
+        {!result.length > 0? <p className="notFound">Not found results</p> : result.map((item, index) => {
           return (
             <PastCard
               key={item.id}
