@@ -11,7 +11,7 @@ const Header = () => {
   const router = useRouter()
 
   const handleSubmit= e =>{
-    // e.preventDefault()
+    e.preventDefault()
     router.push(`/search/${keyword}`)
   }
   const handleChange= e =>{
