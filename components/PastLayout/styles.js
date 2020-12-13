@@ -4,13 +4,22 @@ export const Section = styled.section`
   width: 80%;
   margin: 0 auto;
   margin-top: 180px;
-  margin-bottom: 120px;
+  margin-bottom: 70px;
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
   
 `;
-export const Pagination = styled.section`
+export const BtnContainer = styled.section`
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+
+`;
+export const Pagination = styled.a`
   margin: 0 auto;
   margin-top: 70px;
   box-sizing: border-box;

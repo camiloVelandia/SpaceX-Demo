@@ -39,14 +39,14 @@ const CountDown = () => {
         )
       }
     })
-  }, []);
+  }, [nextlaunch]);
 
   useEffect(() => {
     setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     setDate(nextlaunch.date_local);
-  });
+  },[nextlaunch]);
 
   const timerComponents = [];
 
