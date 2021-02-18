@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer snaaapshot Comprobar ui del footer 1`] = `
+<footer
+  className="styles__Foot-uqm6lj-0 iYUYXz"
+>
+  <p
+    className="styles__Text-uqm6lj-1 hrCPiu"
+  >
+    This project is not affiliated with the SpaceX company or any of its affiliates in any way. I'm just a web developer tinkering with React who loves space exploration and working with APIs.
+  </p>
+</footer>
+`;

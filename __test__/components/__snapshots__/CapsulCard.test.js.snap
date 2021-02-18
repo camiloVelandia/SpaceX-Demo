@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`banner snaaapshot Comprobar ui del banner 1`] = `
+<section
+  className="styles__Container-pem3wt-0 hDuWTJ"
+>
+  <div
+    className="styles__Info-pem3wt-1 iqHQBU"
+  >
+    <div
+      className="styles__Name-pem3wt-2 dnRoKq"
+    />
+    <p
+      className="styles__Text-pem3wt-4 hLWchL"
+    />
+    <div
+      className="styles__Lists-pem3wt-3 hhNOA-d"
+    >
+      <ul
+        className="styles__Ul-pem3wt-6 gSVifP"
+      >
+        <h2>
+          Specs
+        </h2>
+        <li>
+           capacity: 
+        </li>
+        <li>
+           first flight: 
+        </li>
+        <li>
+           type: 
+        </li>
+        <li>
+           height: 
+        </li>
+        <li>
+           feet: 
+        </li>
+      </ul>
+      <ul
+        className="styles__Ul-pem3wt-6 gSVifP"
+      >
+        <h2>
+          thrusters
+        </h2>
+        <li>
+           type: 
+        </li>
+        <li>
+           amount: 
+        </li>
+        <li>
+           fuel1: 
+        </li>
+        <li>
+           fuel2: 
+        </li>
+        <li>
+           isp: 
+        </li>
+        <li>
+           pods: 
+        </li>
+      </ul>
+    </div>
+    <figure
+      className="styles__Figure-pem3wt-5 igbLxp"
+    >
+      <img />
+    </figure>
+  </div>
+  <div
+    className="styles__Status-pem3wt-7 kqwPVp"
+  >
+    <p>
+      status: 
+    </p>
+  </div>
+</section>
+`;

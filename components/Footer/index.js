@@ -3,7 +3,7 @@ import {Foot, Text} from './styles'
 
 const Footer = () => {
   return (
-    <Foot>
+    <Foot >
       <Text>
         This project is not affiliated with the SpaceX company or any of its
         affiliates in any way. I'm just a web developer tinkering with React who

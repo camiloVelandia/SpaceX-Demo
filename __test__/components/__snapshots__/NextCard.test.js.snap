@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nextcard snaaapshot Comprobar ui del nextcard 1`] = `
+<article
+  className="styles__Section-mhp48x-0 fUrKRR"
+>
+  <h2
+    className="styles__Title-mhp48x-1 jBTTBv"
+  >
+    Next missions
+  </h2>
+  <figure
+    className="styles__Figure-mhp48x-2 kzVUdW"
+  >
+    <img
+      src="/images/escudo.png"
+    />
+  </figure>
+  <h3
+    className="styles__Name-mhp48x-3 eCsUFn"
+  />
+  <p
+    className="styles__Text-mhp48x-4 gJOFuB"
+  >
+    Details must be ready in the upcomings days, the information is not provides still.
+  </p>
+  <div
+    className="styles__Info-mhp48x-5 bcmowQ"
+  >
+    <div
+      className="styles__Bullet-mhp48x-6 kBZqf"
+    >
+      <p>
+        date:
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <div
+      className="styles__Bullet-mhp48x-6 kBZqf"
+    >
+      <p>
+        flight number:
+      </p>
+      <p />
+    </div>
+  </div>
+</article>
+`;

@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`about snaaapshot Comprobar ui del about 1`] = `
+<section
+  className="styles__Section-egwdpf-0 fdTLyL"
+>
+  <div
+    className="styles__Container-egwdpf-1 kGKabv"
+  >
+    <article
+      className="styles__Article-egwdpf-2 jTrjbM"
+    >
+      <h2
+        className="styles__Title-egwdpf-3 duaghV"
+      >
+        about: 
+      </h2>
+      <p
+        className="styles__Text-egwdpf-4 HaXMz"
+      />
+      <div
+        className="styles__Grid-egwdpf-5 dFiVAz"
+      >
+        <div
+          className="styles__Item-egwdpf-6 fNlEqf"
+        >
+          <h3>
+            company info
+          </h3>
+          <ul>
+            <li>
+              Founded: 
+            </li>
+            <li>
+              CEO: 
+            </li>
+            <li>
+              CTO: 
+            </li>
+            <li>
+              COO: 
+            </li>
+            <li>
+              CTO propulsion: 
+            </li>
+          </ul>
+        </div>
+        <div
+          className="styles__Item-egwdpf-6 fNlEqf"
+        >
+          <h3>
+            More
+          </h3>
+          <ul>
+            <li>
+              Employees: 
+            </li>
+            <li>
+              Launch Sites: 
+            </li>
+            <li>
+              Valuation: 
+            </li>
+            <li>
+              Website:
+               
+              <a
+                target="_blank"
+              />
+            </li>
+            <li>
+              twitter:
+               
+              <a
+                target="_blank"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article
+      className="styles__Article-egwdpf-2 jTrjbM"
+    >
+      <h2
+        className="styles__Title-egwdpf-3 duaghV"
+      >
+        about: me
+      </h2>
+      <p
+        className="styles__Text-egwdpf-4 HaXMz"
+      >
+        Hi, I'm Camilo Velandia, a passionate self-taught frontEnd web developer from Colombia. with an interest in web and mobile projects, with user-centered approaches. currently part of the Platzi master program.
+      </p>
+      <div
+        className="styles__Grid-egwdpf-5 dFiVAz"
+      >
+        <div
+          className="styles__Item-egwdpf-6 fNlEqf"
+        >
+          <h3>
+            experience
+          </h3>
+          <ul>
+            <li>
+              Software Developer at Platzi master
+            </li>
+            <li>
+              Frontend Developer at 360 PMI
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/camilo-velandia/"
+                target="_blank"
+              >
+                Find me in Linkedin
+                 
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/xander_coder"
+                target="_blank"
+              >
+                Find me in Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/camiloVelandia"
+                target="_blank"
+              >
+                Find me in Github
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          className="styles__Item-egwdpf-6 fNlEqf"
+        >
+          <h3>
+             tools
+          </h3>
+          <ul>
+            <li>
+              Javascript
+            </li>
+            <li>
+              React js
+            </li>
+            <li>
+              Redux
+            </li>
+            <li>
+              Next js
+            </li>
+            <li>
+              Styled components
+            </li>
+            <li>
+              Git
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+`;

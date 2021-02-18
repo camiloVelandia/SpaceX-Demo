@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pastcard snaaapshot Comprobar ui del pastcard 1`] = `
+<article
+  className="styles__Section-sc-1ltfs9r-0 cpXMDO"
+>
+  <h2
+    className="styles__Title-sc-1ltfs9r-1 gNdGHw"
+  >
+    recent missions
+  </h2>
+  <figure
+    className="styles__Figure-sc-1ltfs9r-2 hKcPoF"
+  >
+    <img
+      src="/images/escudo.png"
+    />
+  </figure>
+  <h3
+    className="styles__Name-sc-1ltfs9r-3 gclgRl"
+  />
+  <p
+    className="styles__Text-sc-1ltfs9r-4 gkoFmq"
+  />
+  <div
+    className="styles__Info-sc-1ltfs9r-5 irsmnC"
+  >
+    <div
+      className="styles__Bullet-sc-1ltfs9r-6 buZOHz"
+    >
+      <p>
+        <span>
+          date:
+        </span>
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <div
+      className="styles__Bullet-sc-1ltfs9r-6 buZOHz"
+    >
+      <p>
+        <span>
+          flight number:
+        </span>
+      </p>
+      <p />
+    </div>
+    <div
+      className="styles__Bullet-sc-1ltfs9r-6 buZOHz"
+    >
+      <p>
+        <span>
+          succes:
+        </span>
+      </p>
+      <p />
+    </div>
+  </div>
+</article>
+`;

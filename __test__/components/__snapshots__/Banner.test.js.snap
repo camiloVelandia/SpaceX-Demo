@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`banner snaaapshot Comprobar ui del banner 1`] = `
+<section
+  className="styles__Section-sc-15opjre-0 dIgbUX"
+>
+  <h1>
+     
+  </h1>
+</section>
+`;

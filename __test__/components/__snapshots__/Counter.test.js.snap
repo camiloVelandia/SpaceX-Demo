@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`countDown snaaapshot Comprobar ui del countDown 1`] = `
+<section
+  className="styles__Section-k0nii2-0 hPQerN"
+>
+  <div
+    className="styles__Counter-k0nii2-1 jDZgkK"
+  >
+    <h1>
+      Up Next
+    </h1>
+    <div
+      className="styles__NumberContainer-k0nii2-3 ecqJZR"
+    >
+      <small>
+        Time's up!
+      </small>
+    </div>
+    <div
+      className="styles__Info-k0nii2-2 jWXqnl"
+    >
+      <p>
+        <span>
+          mission:
+        </span>
+         
+      </p>
+      <p>
+        <span>
+          Rocket:
+        </span>
+         
+        falcon
+      </p>
+    </div>
+  </div>
+</section>
+`;
